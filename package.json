@@ -1,0 +1,28 @@
+{
+  "name": "lodash-utils",
+  "version": "0.0.1",
+  "description": "Methods and utilities developed in Lodash",
+  "main": "src/index.js",
+  "scripts": {
+    "format:js": "./node_modules/.bin/esformatter -i --config .formatrc 'src/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migueldelmazo/lodash-utils.git"
+  },
+  "keywords": [
+    "Lodash",
+    "Utils"
+  ],
+  "author": "info@migueldelmazo.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/migueldelmazo/lodash-utils/issues"
+  },
+  "homepage": "https://github.com/migueldelmazo/lodash-utils#readme",
+  "devDependencies": {
+    "esformatter": "^0.10.0",
+    "lodash": "^4.17.11"
+  },
+  "dependencies": {}
+}
