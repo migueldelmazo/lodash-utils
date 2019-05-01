@@ -2,8 +2,9 @@
   "name": "lodash-utils",
   "version": "0.0.1",
   "description": "Methods and utilities developed in Lodash",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
+    "postinstall": "babel src --out-dir build",
     "format:js": "./node_modules/.bin/esformatter -i --config .formatrc 'src/**/*.js'"
   },
   "repository": {
@@ -20,9 +21,13 @@
     "url": "https://github.com/migueldelmazo/lodash-utils/issues"
   },
   "homepage": "https://github.com/migueldelmazo/lodash-utils#readme",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4"
+  },
   "devDependencies": {
     "esformatter": "^0.10.0",
     "lodash": "^4.17.11"
-  },
-  "dependencies": {}
+  }
 }
