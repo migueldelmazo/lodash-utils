@@ -73,7 +73,7 @@ _.mixin({
       hash: location.hash.substr(1),
       host: location.host,
       hostname: location.hostname,
-      pathName: location.pathname,
+      pathname: location.pathname,
       port: location.port,
       protocol: location.protocol,
       queryParams: _.queryParamsToObject(location.href),
