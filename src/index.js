@@ -1,4 +1,5 @@
 import './console'
+import './error'
 import './iterators'
 import './logs'
 import './parser'
