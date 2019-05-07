@@ -13,7 +13,12 @@ _.mixin({
   },
 
   consoleGroup: (type, name, ...args) => {
-    console.group('%c' + name + ' ', getStyles(type), ..._.cloneDeep(args))
+    const styles = getStyles(type)
+    if (styles) {
+      console.group('%c' + name, getStyles(type), ..._.cloneDeep(args))
+    } else {
+      console.group(type + ':', name, ..._.cloneDeep(args))
+    }
   },
 
   consoleGroupEnd: () => {
@@ -21,7 +26,12 @@ _.mixin({
   },
 
   consoleLog: (type, name, ...args) => {
-    console.log('%c' + name + ' ', getStyles(type), ..._.cloneDeep(args))
+    const styles = getStyles(type)
+    if (styles) {
+      console.log('%c' + name, getStyles(type), ..._.cloneDeep(args))
+    } else {
+      console.log(type + ':', name, getStyles(type), ..._.cloneDeep(args))
+    }
   },
 
   consoleError: (...args) => {
