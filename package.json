@@ -2,10 +2,10 @@
   "name": "lodash-utils",
   "version": "0.0.1",
   "description": "Methods and utilities developed in Lodash",
-  "main": "build/index.js",
+  "main": "pkg/index.js",
   "scripts": {
-    "postinstall": "babel src --out-dir build",
-    "format:js": "./node_modules/.bin/esformatter -i --config .formatrc 'src/**/*.js'"
+    "postinstall": "babel src --out-dir ./pkg",
+    "format:js": "esformatter -i --config .formatrc 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
