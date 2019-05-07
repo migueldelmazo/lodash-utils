@@ -13,31 +13,31 @@ _.mixin({
   },
 
   log: (type, name, ...args) => {
-    if (showInConsole()) {
+    if (showInConsole() && _.consoleLog) {
       _.consoleLog(type, name, ...args)
     }
   },
 
   logStart: (type, name, ...args) => {
-    if (showInConsole()) {
+    if (showInConsole() && _.consoleGroup) {
       _.consoleGroup(type, name, ...args)
     }
   },
 
   logEnd: () => {
-    if (showInConsole()) {
+    if (showInConsole() && _.consoleGroupEnd) {
       _.consoleGroupEnd()
     }
   },
 
   logError: (...args) => {
-    if (showInConsole()) {
+    if (showInConsole() && _.consoleError) {
       _.consoleError(...args)
     }
   },
 
   logWarning: (...args) => {
-    if (showInConsole()) {
+    if (showInConsole() && _.consoleWarning) {
       _.consoleWarning(...args)
     }
   }
