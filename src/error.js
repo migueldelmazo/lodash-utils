@@ -2,7 +2,7 @@ import _ from 'lodash'
 
 _.mixin({
 
-  listenWindowError: () {
+  listenWindowError: () => {
     window.onerror = (message, file, line, column, error) => {
       if (_.logError) {
         _.logError(
